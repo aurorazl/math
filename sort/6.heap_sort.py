@@ -1,4 +1,5 @@
-import time_calculate
+from sort import time_calculate
+
 
 def sift(li,low,high):
     tmp = li[low]

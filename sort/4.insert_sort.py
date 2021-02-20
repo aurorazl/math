@@ -1,4 +1,6 @@
-import time_calculate
+from sort import time_calculate
+
+
 @time_calculate.cal_time
 def insert_sort(li):
     for i in range(1,len(li)):

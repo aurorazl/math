@@ -1,4 +1,5 @@
-import time_calculate
+from sort import time_calculate
+
 
 @time_calculate.cal_time
 def select_sort(li):

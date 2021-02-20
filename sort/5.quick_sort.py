@@ -1,4 +1,4 @@
-import time_calculate
+from sort import time_calculate
 import sys
 import random
 sys.setrecursionlimit(1000000000)
@@ -32,7 +32,7 @@ def partition(li,left,right):
 def sys_sort(li):
     li.sort()
 
-import copy
+
 # li = list(range(10000))
 li3 = list(range(100000,0,-1))    # 倒序
 # li2 = copy.deepcopy(li)

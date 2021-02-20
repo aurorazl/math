@@ -1,5 +1,6 @@
-import random,time
-from time_calculate import cal_time,cal_time_foo
+import random
+from sort.time_calculate import cal_time
+
 
 def _quick_sort(li,left,right):
     if left<right:
@@ -96,8 +97,6 @@ if __name__=='__main__':
         li = list(range(10**j))
         random.shuffle(li)
         # print(li)
-        import threading
-        import multiprocessing
         fun_list = [quick_sort,heap,merge_sort]
         for i in fun_list:
             i(li)
