@@ -15,8 +15,6 @@ def egg_search(egg_nums,layers,start,end):
     v = max(a,b)
     if min>v:
         min=v
-
-
     return min
 
 print(egg_search(6,100,1,100))

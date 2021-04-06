@@ -1,16 +1,17 @@
 # li=[1,2,3]
 # lin=[i for i in range(len(li))]
 
-def dfs(position):
+def dfs(position,li):
+    lin = [i for i in range(len(li))]
     if position==len(li):
-        print(lin)
+        print(li)
         return
     for i in range(0,len(li)):
         if li[i]!=0:
             lin[position]=li[i]
             tmp=li[i]
             li[i]=0
-            dfs(position+1)
+            dfs(position+1,li)
             li[i]=tmp
 # dfs([1,2,3])
 # dfs(0)

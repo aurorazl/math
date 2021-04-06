@@ -4,7 +4,7 @@ def merge(li,low,mid,high):
     j = mid+1
     li_tmp = []
     while i<=mid and j <=high:
-        if li[i]<li[j]:
+        if li[i]<li[j]:            #
             li_tmp.append(li[i])
             i+=1
         else:

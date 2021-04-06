@@ -1,3 +1,4 @@
+# 利用快排，或者堆排，维护最大堆
 def partition(li,left,right):
     i = random.randint(left,right)
     li[left],li[i]=li[i],li[left]
