@@ -14,7 +14,7 @@ def preOrderTraverse(node):
     preOrderTraverse(node.right)
 
 # 非递归法
-def preOrderTravese(node):
+def preOrderTravese(node):          # 第一次访问就输出数据
     stack = [node]
     while len(stack) > 0:
         print(node.val)
@@ -24,7 +24,7 @@ def preOrderTravese(node):
             stack.append(node.left)
         node = stack.pop()
 
-def inOrderTraverse(node):
+def inOrderTraverse(node):      # 应用场景：二叉查找树，从小到大出栈
     stack = []
     pos = node
     while pos or len(stack) > 0:
@@ -37,7 +37,7 @@ def inOrderTraverse(node):
             pos = pos.right
 
 
-def postOrderTraverse(node):
+def postOrderTraverse(node):        #对节点操作时必访问过其子节点，适合进行破坏性操作（删除节点）
     stack = [node]
     stack2 = []
     while len(stack) > 0:

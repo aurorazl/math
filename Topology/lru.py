@@ -22,8 +22,6 @@ class LRUCache(collections.OrderedDict):
         if len(self) > self.capacity:
             self.popitem(last=False)
 
-
-
 class DLinkedNode:
     def __init__(self, key=0, value=0):
         self.key = key

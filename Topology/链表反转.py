@@ -22,7 +22,6 @@ def reverseChain2(head):
     head.next = None            # 这一步可以避免造成最后一节和倒数第二环的闭环
     return newHead
 
-
 a = ListNode(1,ListNode(2,ListNode(3,ListNode(4,ListNode(5,ListNode(6,ListNode(7)))))))
 a = reverseChain2(a)
 while a.next:

@@ -19,3 +19,5 @@ class Solution:
             if nums[i] != i + 1:
                 return i + 1
         return n + 1
+
+# 延申： 一系列连续的数，只有一个重复，导致了不连续，求出该数。

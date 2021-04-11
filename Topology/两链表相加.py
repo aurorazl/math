@@ -5,14 +5,14 @@
 解释：342 + 465 = 807.
 """
 class Node:
-    def __init__(self,val=None,next=None):
+    def __init__(self,val=0,next=None):
         self.val = val
         self.next=next
 
 def addTwoNumbers(p,q):
     carry=0
-    curr = Node()
-    c = curr
+    tail = None
+    head = None
     while p or q:
         x,y = 0,0
         if p:
@@ -24,15 +24,20 @@ def addTwoNumbers(p,q):
         sum_x_y = carry+x+y     # 求和，包含进位
         carry = sum_x_y//10     # 进位
         sum_x_y = sum_x_y%10   # 余数
-        curr.val = sum_x_y
-        curr.next = Node()
-        curr = curr.next
-    return c
+        if head:
+            tail.next = Node(sum_x_y)
+            tail = tail.next
+        else:
+            head = Node(sum_x_y)
+            tail = head
+    if carry>0:
+        tail.next = Node(carry)
+    return head
 
 a = Node(2,Node(4,Node(3)))
-b = Node(9,Node(6,Node(4,Node(1))))
+b = Node(5,Node(6,Node(4)))
 # 342 + 469 = 811
 c = addTwoNumbers(a,b)
-while c.val is not None:
+while c:
     print(c.val)            # 从低位开始输出，因为链表本身按照逆序存储。
     c = c.next
