@@ -14,7 +14,7 @@ def preOrderTraverse(node):
     preOrderTraverse(node.right)
 
 # 非递归法
-def preOrderTravese(node):          # 第一次访问就输出数据
+def preOrderTravese(node):          # 第一次访问就输出数据,适合静态访问.运用最多的场合包括在树里进行搜索以及创建一棵新的树
     stack = [node]
     while len(stack) > 0:
         print(node.val)
